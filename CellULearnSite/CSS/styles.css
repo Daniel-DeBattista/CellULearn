@@ -59,3 +59,7 @@
 .nav-item.dropdown:hover .dropdown-content {
     display: block;
 }
+
+.nav-item:hover{
+    background-color:#444
+}
