@@ -16,6 +16,7 @@
 .nav-menu {
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
 }
 
 .nav-item {
@@ -23,7 +24,9 @@
 }
 
 .nav-item a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
     padding: 15px 16px;
