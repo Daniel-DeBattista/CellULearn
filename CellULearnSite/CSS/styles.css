@@ -42,7 +42,7 @@
     width: 225px;
     left: 0;
     background-color: #686565;
-    z-index: 999; /* Ensure it appears above other elements */
+    z-index: 999; /* Ensure dropdown appears above other elements */
 }
 
 .dropdown-content a {
