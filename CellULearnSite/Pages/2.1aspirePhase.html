@@ -47,7 +47,16 @@
         <div class="Aspire-flowchart">
             <!--Thinking.svg originally from undraw.co-->
             <img src="../Assets/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
-            <img src="../Assets/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 350px;">
+            <img src="../Assets/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
+            <!--Left collumn: Social worker path-->
+            <img src="../Assets/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
+            <img src="../Assets/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
+            <img src="../Assets/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
+            <img src="../Assets/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
+            <!--Right collumn: Dcotor path-->
+            <img src="../Assets/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
+            <img src="../Assets/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
+            <img src="../Assets/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
         </div>
         <!--Styling flowchart div-->
         <style>
@@ -61,7 +70,84 @@
             .Aspire-flowchart img{
                 position: absolute;
             }
+
+            .clickable {
+            cursor: pointer;
+            transition: transform 0.1s linear;
+        }
+        .clickable:hover {
+            transform: scale(1.02);
+        }
+
+        .aspireCareerChoice {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
         </style>
+
+        <!--Script for flowchart-->
+        <script>
+            // Define the path sequences
+            const socialWorkerSequence = [
+                document.getElementById('social-worker-path'),
+                document.getElementById('social-step1'),
+                document.getElementById('social-step2'),
+                document.getElementById('social-step3')
+            ];
+            
+            const doctorSequence = [
+                document.getElementById('doctor-path'),
+                document.getElementById('doctor-step1'),
+                document.getElementById('doctor-step2')
+            ];
+            
+            // Reset all steps to hidden state except the first step in each path
+            function resetAllSteps() {
+                const allSteps = document.querySelectorAll('.aspireCareerChoice');
+                allSteps.forEach(step => {
+                    step.classList.remove('visible');
+                });
+            }
+            
+            // Setup click handlers for the social worker path
+            socialWorkerSequence.forEach((step, index) => {
+                if (index < socialWorkerSequence.length - 1) { // Don't add a click handler to the last step
+                    step.addEventListener('click', () => {
+                        // Reset all steps if clicking on the first step in the path
+                        if (index === 0) {
+                            resetAllSteps();
+                        }
+                        
+                        // Show the next step
+                        const nextStep = socialWorkerSequence[index + 1];
+                        nextStep.classList.add('visible');
+                    });
+                }
+            });
+            
+            // Setup click handlers for the doctor path
+            doctorSequence.forEach((step, index) => {
+                if (index < doctorSequence.length - 1) { // Don't add a click handler to the last step
+                    step.addEventListener('click', () => {
+                        // Reset all steps if clicking on the first step in the path
+                        if (index === 0) {
+                            resetAllSteps();
+                        }
+                        
+                        // Show the next step
+                        const nextStep = doctorSequence[index + 1];
+                        nextStep.classList.add('visible');
+                    });
+                }
+            });
+        </script>
+
     </body>
 </html>
 
