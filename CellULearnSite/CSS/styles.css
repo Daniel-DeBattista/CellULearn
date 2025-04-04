@@ -66,3 +66,22 @@
 .nav-item:hover{
     background-color:#444
 }
+
+.bottomNavButton{
+    background-color: #008CBA;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 32px;
+    border:solid;
+    border-color: #008CBA;
+    border-width: 2px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.bottomNavButton:hover{
+    background-color: white;
+    color: #008CBA;
+}
