@@ -44,25 +44,48 @@
         <h1>
             Aspire Phase page
         </h1>
-        <div class="Aspire-flowchart">
-            <!--Thinking.svg originally from undraw.co-->
-            <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
-            <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
-            <!--Left collumn: Social worker path-->
-            <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
-            <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
-            <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
-            <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
-            <!--Right collumn: Dcotor path-->
-            <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
-            <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
-            <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
+        <div class="backGroundColor">
+            <div class="WholePage">
+                <div class="Aspire-flowchart">
+                    <!--Thinking.svg originally from undraw.co-->
+                    <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
+                    <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
+                    <!--Left collumn: Social worker path-->
+                    <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice endChart" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
+                    <!--Right collumn: Dcotor path-->
+                    <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
+                    <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
+                    <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice endChart" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
+                </div>
+                <div class="reveal-text">
+                    <p>
+                        Wah example text
+                    </p>
+                </div>
+            </div>
         </div>
         <!--Styling flowchart div-->
         <style>
-            .Aspire-flowchart{
+            .backGroundColor{
                 background-color: lightblue;
+            }
+            .WholePage{
                 min-width: 500px;
+                min-height: 600px;
+                overflow: hidden;
+                position: static;
+                display: flex;
+                justify-content: center;
+            }
+            .WholePage.slide-start {
+                justify-content: flex-start;
+            }
+            .Aspire-flowchart{
+                
+                min-width: 800px;
                 min-height: 600px;
                 overflow: auto;
                 position: relative;
@@ -74,21 +97,34 @@
             .clickable {
             cursor: pointer;
             transition: transform 0.1s linear;
-        }
-        .clickable:hover {
-            transform: scale(1.02);
-        }
+            }
+            .clickable:hover {
+                transform: scale(1.02);
+            }
 
-        .aspireCareerChoice {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s;
-        }
+            .aspireCareerChoice {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s ease, visibility 0.5s;
+            }
 
-        .visible {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
+            .visible {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+            .reveal-text {
+                flex-shrink: 0;            
+                visibility: hidden;          
+                transform: translateX(100%);
+                opacity: 0;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            .WholePage.slide-start .reveal-text {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                width: 300px;
+            }
         </style>
 
         <!--Script for flowchart-->
@@ -145,6 +181,13 @@
                         nextStep.classList.add('visible');
                     });
                 }
+            });
+            const wholePage = document.querySelector('.WholePage');
+
+            document.querySelectorAll('.endChart').forEach(endNode => {
+                endNode.addEventListener('click', () => {
+                    wholePage.classList.add('slide-start');
+                }, { once: true });
             });
         </script>
 
