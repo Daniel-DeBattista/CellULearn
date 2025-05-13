@@ -40,31 +40,31 @@
                 </ul>
             </nav>
         </header>
-        <!--Text to tell pages apart at a glance-->
-        <h1>
-            Aspire Phase page
-        </h1>
-        <div class="backGroundColor">
-            <div class="WholePage">
-                <div class="Aspire-flowchart">
-                    <!--Thinking.svg originally from undraw.co-->
-                    <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
-                    <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
-                    <!--Left collumn: Social worker path-->
-                    <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
-                    <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
-                    <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
-                    <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice endChart" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
-                    <!--Right collumn: Dcotor path-->
-                    <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
-                    <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
-                    <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice endChart" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
+        <img src="..//Assets/AspirePage/AspireHeader.png" style="display: block; width: 100%; height: 170px; object-fit: cover; object-position: center;"/>
+        <div class="backGroundColor" style="align-items: center;">
+            <h1 style="font-size: 2em; text-align: center;">Setting goals can guide and motivate you.</h1>
+            <h1 style="font-size: 1.8em; font-weight: normal;text-align: center; max-width: 70%; margin: 0 auto;">In this section, we'll explore different types of goals and help you articulate your own personal goals.</h1>
+            <h1 style="font-size: 1.6em; font-weight: normal;text-align: center; max-width: 75%; margin: 0 auto; padding-top: 80px;">You can take a standardized approach to goal setting. Let's start with an example. Click on the thought bubbles to set goals.</h1>
+            <div class="textAndAnimated">
+                <div class="WholePage">
+                    <div class="Aspire-flowchart">
+                        <!--Thinking.svg originally from undraw.co-->
+                        <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
+                        <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
+                        <!--Left collumn: Social worker path-->
+                        <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
+                        <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
+                        <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
+                        <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice endChart" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
+                        <!--Right collumn: Dcotor path-->
+                        <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
+                        <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
+                        <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice endChart" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
+                    </div>
                 </div>
-                <div class="reveal-text">
-                    <p>
-                        Example text
-                    </p>
-                </div>
+                
+                <h1 class="hiddenText" style="font-size: 2em; text-align: center; visibility: hidden;max-width: 70%; margin: 0 auto; padding: 10px;">Even if you are unsure about your future plans, developing good study habits will provide you with skills you can apply in any situation.</h1>
+                
             </div>
         </div>
         <!--Styling flowchart div-->
@@ -72,23 +72,15 @@
             .backGroundColor{
                 background-color: lightblue;
             }
-            .WholePage{
-                min-width: 500px;
-                min-height: 600px;
-                overflow: hidden;
-                position: static;
-                display: flex;
-                justify-content: center;
-            }
-            .WholePage.slide-start {
-                justify-content: flex-start;
-            }
+            
+            
             .Aspire-flowchart{
                 
                 min-width: 800px;
                 min-height: 600px;
                 overflow: auto;
                 position: relative;
+                
             }
             .Aspire-flowchart img{
                 position: absolute;
@@ -112,18 +104,29 @@
                 opacity: 1 !important;
                 visibility: visible !important;
             }
-            .reveal-text {
-                flex-shrink: 0;            
-                visibility: hidden;          
-                transform: translateX(100%);
-                opacity: 0;
-                transition: transform 0.5s ease, opacity 0.5s ease;
+            .WholePage {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                overflow: hidden;
             }
-            .WholePage.slide-start .reveal-text {
-                transform: translateX(0);
+
+            .reveal-text {
+                visibility:hidden;
                 opacity: 1;
-                visibility: visible;
-                width: 300px;
+                margin-left: 1rem;
+            }
+
+            .WholePage.slide-start .reveal-text{
+                opacity: 1;
+                visibility:visible;
+                max-width: 350px;
+            }
+
+            .reveal-text h1 {
+                /* let them size naturally now */
+                width: auto !important;
+                text-align: center;
             }
         </style>
 
@@ -182,11 +185,11 @@
                     });
                 }
             });
-            const wholePage = document.querySelector('.WholePage');
+            const wholePage = document.querySelector('.hiddenText');
 
             document.querySelectorAll('.endChart').forEach(endNode => {
                 endNode.addEventListener('click', () => {
-                    wholePage.classList.add('slide-start');
+                    wholePage.classList.add('visible');
                 }, { once: true });
             });
         </script>
