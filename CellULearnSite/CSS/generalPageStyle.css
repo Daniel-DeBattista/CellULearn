@@ -4,17 +4,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-width: 320px;
+    min-width: 1200px;
 }
 
 .SectionContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 50px 20px;
 
     /*For testing only*/
     border-style: solid;
     border-color: red;
-    border-width: 5px;
+    border-width: 3px;
+}
+
+.SectionContent{
+    margin: 10px;
+    padding: 10px 20px;
+    min-width: 20%;
+
+    /*For testing only*/
+    border-style: solid;
+}
+
+.ImageHeader{
+    width: 1100px;
+    height: 225px;
+    object-fit: cover;
+    object-position: center;
 }
