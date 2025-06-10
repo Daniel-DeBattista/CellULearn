@@ -1,0 +1,20 @@
+.WholePage{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 320px;
+}
+
+.SectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*For testing only*/
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;
+}
