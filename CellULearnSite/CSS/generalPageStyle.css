@@ -1,0 +1,43 @@
+.WholePage{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 1200px;
+}
+
+.SectionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 10px;
+    
+
+    /*For testing only*/
+    border-style: none none dashed;
+    border-color: rgb(173, 173, 173);
+    border-width: 3px;
+}
+
+.SectionContent{
+    margin: 10px;
+    padding: 10px 20px;
+    width: 440px;
+    margin: 10px 30px;
+
+    /*For testing only*/
+    border-style: solid;
+    border-color: black;
+    font-size: 1.6em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(129, 136, 145);
+}
+
+.ImageHeader{
+    width: 1100px;
+    height: 225px;
+    object-fit: cover;
+    object-position: center;
+}
