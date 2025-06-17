@@ -18,7 +18,7 @@
     /*For testing only*/
     border-style: none none dashed;
     border-color: rgb(173, 173, 173);
-    border-width: 3px;
+    border-width: 1px;
 }
 
 .SectionContent{
@@ -30,9 +30,10 @@
     /*For testing only*/
     border-style: solid;
     border-color: black;
+    border-radius: 25px;
     font-size: 1.6em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(129, 136, 145);
+    color: rgb(91, 118, 155);
 }
 
 .ImageHeader{
