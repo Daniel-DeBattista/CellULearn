@@ -368,13 +368,138 @@
                         *Return to your Canvas Assignment*
                     </h2>
                     <p style="line-height: 1.5; padding-top: 10px;">
-                        Think about which study strategies you could use in different conditions. Describe a study strategy you could use to emphasize memorization and one you could use to learn how to predict the outcome of an experiment.  
+                        Think about which study strategies you could use in different conditions. Describe a study
+                        strategy you could use to emphasize memorization and one you could use to learn how to predict
+                        the outcome of an experiment.
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/script.js"></script>
+
+    <div style="height: 75px;"></div>
+    <footer class="footer-nav">
+        <a href="#" id="prevButton" class="footer-nav-button prev">Previous</a>
+        <a href="#" id="nextButton" class="footer-nav-button next">Next</a>
+    </footer>
+
+    <script>
+        // Navigation mapping for all pages
+        const navigationMap = {
+            'index.html': {
+                prev: null,
+                next: 'CellULearnSite/Pages/1.0brainOverview.html'
+            },
+            '1.0brainOverview.html': {
+                prev: '../../index.html',
+                next: '1.1howMemory.html'
+            },
+            '1.1howMemory.html': {
+                prev: '1.0brainOverview.html',
+                next: '1.2neuronConnections.html'
+            },
+            '1.2neuronConnections.html': {
+                prev: '1.1howMemory.html',
+                next: '2.0cyclesOverview.html'
+            },
+            '2.0cyclesOverview.html': {
+                prev: '1.2neuronConnections.html',
+                next: '2.1aspirePhase.html'
+            },
+            '2.1aspirePhase.html': {
+                prev: '2.0cyclesOverview.html',
+                next: '2.2stratPhase.html'
+            },
+            '2.2stratPhase.html': {
+                prev: '2.1aspirePhase.html',
+                next: '2.3planPhase.html'
+            },
+            '2.3planPhase.html': {
+                prev: '2.2stratPhase.html',
+                next: '2.4barriersPhase.html'
+            },
+            '2.4barriersPhase.html': {
+                prev: '2.3planPhase.html',
+                next: '2.5regulatePhase.html'
+            },
+            '2.5regulatePhase.html': {
+                prev: '2.4barriersPhase.html',
+                next: '2.6evalPhase.html'
+            },
+            '2.6evalPhase.html': {
+                prev: '2.5regulatePhase.html',
+                next: '2.7cyclesSummary.html'
+            },
+            '2.7cyclesSummary.html': {
+                prev: '2.6evalPhase.html',
+                next: '3.0citations.html'
+            },
+            '3.0citations.html': {
+                prev: '2.7cyclesSummary.html',
+                next: null
+            }
+        };
+
+        // Function to get current page filename
+        function getCurrentPageName() {
+            const path = window.location.pathname;
+            const filename = path.split('/').pop();
+            return filename || 'index.html';
+        }
+
+        // Function to initialize navigation buttons
+        function initializeNavigation() {
+            const currentPage = getCurrentPageName();
+            const navigation = navigationMap[currentPage];
+
+            if (!navigation) {
+                console.warn('Navigation not found for page:', currentPage);
+                return;
+            }
+
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+
+            // Handle previous button
+            if (navigation.prev) {
+                prevButton.href = navigation.prev;
+                prevButton.style.visibility = 'visible';
+            } else {
+                prevButton.style.visibility = 'hidden';
+            }
+
+            // Handle next button
+            if (navigation.next) {
+                nextButton.href = navigation.next;
+                nextButton.style.visibility = 'visible';
+            } else {
+                nextButton.style.visibility = 'hidden';
+            }
+        }
+
+        // Initialize navigation when page loads
+        document.addEventListener('DOMContentLoaded', initializeNavigation);
+
+        // Optional: Add keyboard navigation (arrow keys)
+        document.addEventListener('keydown', function (event) {
+            const currentPage = getCurrentPageName();
+            const navigation = navigationMap[currentPage];
+
+            if (!navigation) return;
+
+            // Left arrow key for previous
+            if (event.key === 'ArrowLeft' && navigation.prev) {
+                window.location.href = navigation.prev;
+            }
+
+            // Right arrow key for next
+            if (event.key === 'ArrowRight' && navigation.next) {
+                window.location.href = navigation.next;
+            }
+        });
+    </script>
+
 </body>
 
 </html>

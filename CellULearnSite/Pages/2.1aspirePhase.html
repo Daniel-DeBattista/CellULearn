@@ -1,199 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Aspire Phase
-        </title>
-        <link rel="stylesheet" href="../CSS/styles.css">
-    </head>
-    <body>
-        
-        <header>
-            <nav class="navbar">
-                <ul class="nav-menu">
-                    <li class="nav-item" style="width: 100px; display: flex;"><a href="../../index.html">Home</a></li>
-                    
-                    <!-- Dropdown Column 1 -->
-                    <li class="nav-item dropdown">
-                        <a href="1.0brainOverview.html" class="dropbtn">How your brain works</a>
-                        <div class="dropdown-content">
-                          <a href="1.1howMemory.html">1. How does memory work?</a>
-                          <a href="1.2neuronConnections.html">2. Neuronal Connections</a>
-                        </div>
-                      </li>
-                    <!-- Dropdown Column 2 -->
-                    <li class="nav-item dropdown">
-                        <a href="2.0cyclesOverview.html" class="dropbtn">Cycle of learning</a>
-                        <div class="dropdown-content">
-                            <a href="2.1aspirePhase.html">1. Aspire Phase</a>
-                            <a href="2.2stratPhase.html">2. Strategize Phase</a>
-                            <a href="2.3planPhase.html">3. Plan Phase</a>
-                            <a href="2.4barriersPhase.html">4. Identify Barriers Phase</a>
-                            <a href="2.5regulatePhase.html">5. Regulate Phase</a>
-                            <a href="2.6evalPhase.html">6. Evaluate Phase</a>
-                            <a href="2.7cyclesSummary.html">Summary</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"  style="width: 100px; display: flex;"><a href="3.0citations.html">Citations</a></li>
-                </ul>
-            </nav>
-        </header>
-        <img src="..//Assets/AspirePage/AspireHeader.png" style="display: block; width: 100%; height: 170px; object-fit: cover; object-position: center;"/>
-        <div class="backGroundColor" style="align-items: center;">
-            <h1 style="font-size: 2em; text-align: center;">Setting goals can guide and motivate you.</h1>
-            <h1 style="font-size: 1.8em; font-weight: normal;text-align: center; max-width: 70%; margin: 0 auto;">In this section, we'll explore different types of goals and help you articulate your own personal goals.</h1>
-            <h1 style="font-size: 1.6em; font-weight: normal;text-align: center; max-width: 75%; margin: 0 auto; padding-top: 80px;">You can take a standardized approach to goal setting. Let's start with an example. Click on the thought bubbles to set goals.</h1>
-            <div class="textAndAnimated">
-                <div class="WholePage">
-                    <div class="Aspire-flowchart">
-                        <!--Thinking.svg originally from undraw.co-->
-                        <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart" style="height: 500px;top: 75px; left: 15px;">
-                        <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble" style="width: 250px;top: 30px; left: 400px;">
-                        <!--Left collumn: Social worker path-->
-                        <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable" alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
-                        <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1" class="aspireCareerChoice clickable" alt="Complete bachelor's degree" style="width: 125px; top: 285px; left: 335px;">
-                        <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2" class="aspireCareerChoice clickable" alt="Gain experience by volunteering" style="width: 125px; top: 385px; left: 335px;">
-                        <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3" class="aspireCareerChoice endChart" alt="Complete social worker certification" style="width: 125px; top: 485px; left: 335px;">
-                        <!--Right collumn: Dcotor path-->
-                        <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable" alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
-                        <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1" class="aspireCareerChoice clickable" alt="Apply to medical school" style="width: 125px; top: 290px; left:580px;">
-                        <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2" class="aspireCareerChoice endChart" alt="Pass the MCAT" style="width: 125px; top: 390px; left:580px;">
-                    </div>
-                </div>
-                
-                <h1 class="hiddenText" style="font-size: 2em; text-align: center; visibility: hidden;max-width: 70%; margin: 0 auto; padding: 10px;">Even if you are unsure about your future plans, developing good study habits will provide you with skills you can apply in any situation.</h1>
-                
-            </div>
-        </div>
-        <!--Styling flowchart div-->
-        <style>
-            .backGroundColor{
-                background-color: lightblue;
-            }
-            
-            
-            .Aspire-flowchart{
-                
-                min-width: 800px;
-                min-height: 600px;
-                overflow: auto;
-                position: relative;
-                
-            }
-            .Aspire-flowchart img{
-                position: absolute;
-            }
 
-            .clickable {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Aspire Phase
+    </title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/generalPageStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item" style="width: 100px; display: flex;"><a href="../../index.html">Home</a></li>
+
+                <!-- Dropdown Column 1 -->
+                <li class="nav-item dropdown">
+                    <a href="1.0brainOverview.html" class="dropbtn">How your brain works</a>
+                    <div class="dropdown-content">
+                        <a href="1.1howMemory.html">1. How does memory work?</a>
+                        <a href="1.2neuronConnections.html">2. Neuronal Connections</a>
+                    </div>
+                </li>
+                <!-- Dropdown Column 2 -->
+                <li class="nav-item dropdown">
+                    <a href="2.0cyclesOverview.html" class="dropbtn">Cycle of learning</a>
+                    <div class="dropdown-content">
+                        <a href="2.1aspirePhase.html">1. Aspire Phase</a>
+                        <a href="2.2stratPhase.html">2. Strategize Phase</a>
+                        <a href="2.3planPhase.html">3. Plan Phase</a>
+                        <a href="2.4barriersPhase.html">4. Identify Barriers Phase</a>
+                        <a href="2.5regulatePhase.html">5. Regulate Phase</a>
+                        <a href="2.6evalPhase.html">6. Evaluate Phase</a>
+                        <a href="2.7cyclesSummary.html">Summary</a>
+                    </div>
+                </li>
+                <li class="nav-item" style="width: 100px; display: flex;"><a href="3.0citations.html">Citations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="..//Assets/AspirePage/AspireHeader.png"
+        style="display: block; width: 100%; height: 170px; object-fit: cover; object-position: center;" />
+    <div class="backGroundColor" style="align-items: center;">
+        <h1 style="font-size: 2em; text-align: center;">Setting goals can guide and motivate you.</h1>
+        <h1 style="font-size: 1.8em; font-weight: normal;text-align: center; max-width: 70%; margin: 0 auto;">In this
+            section, we'll explore different types of goals and help you articulate your own personal goals.</h1>
+        <h1
+            style="font-size: 1.6em; font-weight: normal;text-align: center; max-width: 75%; margin: 0 auto; padding-top: 80px;">
+            You can take a standardized approach to goal setting. Let's start with an example. Click on the thought
+            bubbles to set goals.</h1>
+        <div class="textAndAnimated">
+            <div class="WholePage">
+                <div class="Aspire-flowchart">
+                    <!--Thinking.svg originally from undraw.co-->
+                    <img src="../Assets/AspirePage/Thinking.svg" alt="Career planning flowchart"
+                        style="height: 500px;top: 75px; left: 15px;">
+                    <img src="../Assets/AspirePage/1.1thoughtbub.svg" alt="Thought bubble"
+                        style="width: 250px;top: 30px; left: 400px;">
+                    <!--Left collumn: Social worker path-->
+                    <img src="../Assets/AspirePage/1.2careerchoice.svg" id="social-worker-path" class="clickable"
+                        alt="Career choice: social worker" style="width: 125px; top: 185px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.6careerchoice.svg" id="social-step1"
+                        class="aspireCareerChoice clickable" alt="Complete bachelor's degree"
+                        style="width: 125px; top: 285px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.7careerchoice.svg" id="social-step2"
+                        class="aspireCareerChoice clickable" alt="Gain experience by volunteering"
+                        style="width: 125px; top: 385px; left: 335px;">
+                    <img src="../Assets/AspirePage/1.8careerchoice.svg" id="social-step3"
+                        class="aspireCareerChoice endChart" alt="Complete social worker certification"
+                        style="width: 125px; top: 485px; left: 335px;">
+                    <!--Right collumn: Dcotor path-->
+                    <img src="../Assets/AspirePage/1.3careerchoice.svg" id="doctor-path" class="clickable"
+                        alt="Career choice: Doctor" style="width: 125px; top: 190px; left:580px;">
+                    <img src="../Assets/AspirePage/1.4careerchoice.svg" id="doctor-step1"
+                        class="aspireCareerChoice clickable" alt="Apply to medical school"
+                        style="width: 125px; top: 290px; left:580px;">
+                    <img src="../Assets/AspirePage/1.5careerchoice.svg" id="doctor-step2"
+                        class="aspireCareerChoice endChart" alt="Pass the MCAT"
+                        style="width: 125px; top: 390px; left:580px;">
+                </div>
+            </div>
+
+            <h1 class="hiddenText"
+                style="font-size: 2em; text-align: center; visibility: hidden;max-width: 70%; margin: 0 auto; padding: 10px;">
+                Even if you are unsure about your future plans, developing good study habits will provide you with
+                skills you can apply in any situation.</h1>
+
+        </div>
+    </div>
+    <!--Styling flowchart div-->
+    <style>
+        .backGroundColor {
+            background-color: white;
+        }
+
+
+        .Aspire-flowchart {
+
+            min-width: 800px;
+            min-height: 600px;
+            overflow: auto;
+            position: relative;
+
+        }
+
+        .Aspire-flowchart img {
+            position: absolute;
+        }
+
+        .clickable {
             cursor: pointer;
             transition: transform 0.1s linear;
-            }
-            .clickable:hover {
-                transform: scale(1.02);
-            }
+        }
 
-            .aspireCareerChoice {
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.5s ease, visibility 0.5s;
-            }
+        .clickable:hover {
+            transform: scale(1.02);
+        }
 
-            .visible {
-                opacity: 1 !important;
-                visibility: visible !important;
-            }
-            .WholePage {
-                display: flex;
-                justify-content: center;
-                flex-direction: row;
-                overflow: hidden;
-            }
+        .aspireCareerChoice {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
 
-            .reveal-text {
-                visibility:hidden;
-                opacity: 1;
-                margin-left: 1rem;
-            }
+        .visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
 
-            .WholePage.slide-start .reveal-text{
-                opacity: 1;
-                visibility:visible;
-                max-width: 350px;
-            }
+        .WholePage {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            overflow: hidden;
+        }
 
-            .reveal-text h1 {
-                /* let them size naturally now */
-                width: auto !important;
-                text-align: center;
-            }
-        </style>
+        .reveal-text {
+            visibility: hidden;
+            opacity: 1;
+            margin-left: 1rem;
+        }
 
-        <!--Script for flowchart-->
-        <script>
-            // Define the path sequences
-            const socialWorkerSequence = [
-                document.getElementById('social-worker-path'),
-                document.getElementById('social-step1'),
-                document.getElementById('social-step2'),
-                document.getElementById('social-step3')
-            ];
-            
-            const doctorSequence = [
-                document.getElementById('doctor-path'),
-                document.getElementById('doctor-step1'),
-                document.getElementById('doctor-step2')
-            ];
-            
-            // Reset all steps to hidden state except the first step in each path
-            function resetAllSteps() {
-                const allSteps = document.querySelectorAll('.aspireCareerChoice');
-                allSteps.forEach(step => {
-                    step.classList.remove('visible');
+        .WholePage.slide-start .reveal-text {
+            opacity: 1;
+            visibility: visible;
+            max-width: 350px;
+        }
+
+        .reveal-text h1 {
+            /* let them size naturally now */
+            width: auto !important;
+            text-align: center;
+        }
+    </style>
+
+    <!--Script for flowchart-->
+    <script>
+        // Define the path sequences
+        const socialWorkerSequence = [
+            document.getElementById('social-worker-path'),
+            document.getElementById('social-step1'),
+            document.getElementById('social-step2'),
+            document.getElementById('social-step3')
+        ];
+
+        const doctorSequence = [
+            document.getElementById('doctor-path'),
+            document.getElementById('doctor-step1'),
+            document.getElementById('doctor-step2')
+        ];
+
+        // Reset all steps to hidden state except the first step in each path
+        function resetAllSteps() {
+            const allSteps = document.querySelectorAll('.aspireCareerChoice');
+            allSteps.forEach(step => {
+                step.classList.remove('visible');
+            });
+        }
+
+        // Setup click handlers for the social worker path
+        socialWorkerSequence.forEach((step, index) => {
+            if (index < socialWorkerSequence.length - 1) { // Don't add a click handler to the last step
+                step.addEventListener('click', () => {
+                    // Reset all steps if clicking on the first step in the path
+                    if (index === 0) {
+                        resetAllSteps();
+                    }
+
+                    // Show the next step
+                    const nextStep = socialWorkerSequence[index + 1];
+                    nextStep.classList.add('visible');
                 });
             }
-            
-            // Setup click handlers for the social worker path
-            socialWorkerSequence.forEach((step, index) => {
-                if (index < socialWorkerSequence.length - 1) { // Don't add a click handler to the last step
-                    step.addEventListener('click', () => {
-                        // Reset all steps if clicking on the first step in the path
-                        if (index === 0) {
-                            resetAllSteps();
-                        }
-                        
-                        // Show the next step
-                        const nextStep = socialWorkerSequence[index + 1];
-                        nextStep.classList.add('visible');
-                    });
-                }
-            });
-            
-            // Setup click handlers for the doctor path
-            doctorSequence.forEach((step, index) => {
-                if (index < doctorSequence.length - 1) { // Don't add a click handler to the last step
-                    step.addEventListener('click', () => {
-                        // Reset all steps if clicking on the first step in the path
-                        if (index === 0) {
-                            resetAllSteps();
-                        }
-                        
-                        // Show the next step
-                        const nextStep = doctorSequence[index + 1];
-                        nextStep.classList.add('visible');
-                    });
-                }
-            });
-            const wholePage = document.querySelector('.hiddenText');
+        });
 
-            document.querySelectorAll('.endChart').forEach(endNode => {
-                endNode.addEventListener('click', () => {
-                    wholePage.classList.add('visible');
-                }, { once: true });
-            });
-        </script>
+        // Setup click handlers for the doctor path
+        doctorSequence.forEach((step, index) => {
+            if (index < doctorSequence.length - 1) { // Don't add a click handler to the last step
+                step.addEventListener('click', () => {
+                    // Reset all steps if clicking on the first step in the path
+                    if (index === 0) {
+                        resetAllSteps();
+                    }
 
-    </body>
+                    // Show the next step
+                    const nextStep = doctorSequence[index + 1];
+                    nextStep.classList.add('visible');
+                });
+            }
+        });
+        const wholePage = document.querySelector('.hiddenText');
+
+        document.querySelectorAll('.endChart').forEach(endNode => {
+            endNode.addEventListener('click', () => {
+                wholePage.classList.add('visible');
+            }, { once: true });
+        });
+    </script>
+
+    <div class="page-container">
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1000px;">
+                <h2 style="text-align: center;">
+                    Even if you are unsure about your future plans, developing good study habits will provide you with
+                    skills you can apply in any situation.
+                </h2>
+            </div>
+        </div>
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1100px;">
+                <h3 style="text-align: center;">
+                    Now think about YOUR goals.
+                </h3>
+                <h3 style="text-align: center; color: red;">
+                    Open your Canvas assignment now and follow along with the module side by side.
+                </h3>
+                <p style="text-align: center;">
+                    Write down your aspirational goal and list three or more steps you will take to get there.
+                </p>
+            </div>
+        </div>
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1100px;">
+                <h2 style="text-align: center;">
+                    The infographic above was an example of how to take a big, life goal and break it down into smaller
+                    goals.
+                </h2>
+                <p style="text-align: center;">
+                    When breaking down your own life goal, you can use the SMART criteria below to guide you.
+                </p>
+            </div>
+        </div>
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1100px;">
+                <img src="/CellULearnSite/Assets/CyclesOfLearningPage/aspireSMART.png" style="width: 100%;">
+                <p style="text-align: center;">
+                    You can use these criteria as guidelines to take small, well-defined steps.
+                </p>
+            </div>
+        </div>
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1200px;">
+                <h3>Here are some examples of possible SMART goals:</h3>
+                <ul style="padding-left: 25px;">
+                    <li>I will attend office hours once a month to review content I am not familiar with for the next
+                        exam.</li>
+                    <li>One month before the next exam I will form a study group.</li>
+                    <li>One week before the next exam, I will complete the practice exam and/or study guide and visit
+                        office hours to review my answers.</li>
+                    <li>Every day after lecture, I will review my notes and add any new terms or ideas to a Quizlet. I
+                        will use Quizlet to study from 2-3 PM on Sunday, Tuesday, and Thursday.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="SectionContainer">
+            <div class="SectionContent" style="width: 1200px;">
+    <h3>Other things to consider while making goals:</h3>
+    <ul style="padding-left: 20px;">
+        <li><strong>Have both performance (grade) and knowledge (understanding) goals.</strong> A lasting understanding will help you in the future.</li>
+        <li><strong>Stay motivated:</strong> remind yourself of your aspirational goals. If an outcome is not what you wanted, you can plan for the next time and attack your goal again!</li>
+    </ul>
+</div>
+        </div>
+    </div>
+
+
+    <div style="height: 75px;"></div>
+    <footer class="footer-nav">
+        <a href="#" id="prevButton" class="footer-nav-button prev">Previous</a>
+        <a href="#" id="nextButton" class="footer-nav-button next">Next</a>
+    </footer>
+
+    <script>
+        // Navigation mapping for all pages
+        const navigationMap = {
+            'index.html': {
+                prev: null,
+                next: 'CellULearnSite/Pages/1.0brainOverview.html'
+            },
+            '1.0brainOverview.html': {
+                prev: '../../index.html',
+                next: '1.1howMemory.html'
+            },
+            '1.1howMemory.html': {
+                prev: '1.0brainOverview.html',
+                next: '1.2neuronConnections.html'
+            },
+            '1.2neuronConnections.html': {
+                prev: '1.1howMemory.html',
+                next: '2.0cyclesOverview.html'
+            },
+            '2.0cyclesOverview.html': {
+                prev: '1.2neuronConnections.html',
+                next: '2.1aspirePhase.html'
+            },
+            '2.1aspirePhase.html': {
+                prev: '2.0cyclesOverview.html',
+                next: '2.2stratPhase.html'
+            },
+            '2.2stratPhase.html': {
+                prev: '2.1aspirePhase.html',
+                next: '2.3planPhase.html'
+            },
+            '2.3planPhase.html': {
+                prev: '2.2stratPhase.html',
+                next: '2.4barriersPhase.html'
+            },
+            '2.4barriersPhase.html': {
+                prev: '2.3planPhase.html',
+                next: '2.5regulatePhase.html'
+            },
+            '2.5regulatePhase.html': {
+                prev: '2.4barriersPhase.html',
+                next: '2.6evalPhase.html'
+            },
+            '2.6evalPhase.html': {
+                prev: '2.5regulatePhase.html',
+                next: '2.7cyclesSummary.html'
+            },
+            '2.7cyclesSummary.html': {
+                prev: '2.6evalPhase.html',
+                next: '3.0citations.html'
+            },
+            '3.0citations.html': {
+                prev: '2.7cyclesSummary.html',
+                next: null
+            }
+        };
+
+        // Function to get current page filename
+        function getCurrentPageName() {
+            const path = window.location.pathname;
+            const filename = path.split('/').pop();
+            return filename || 'index.html';
+        }
+
+        // Function to initialize navigation buttons
+        function initializeNavigation() {
+            const currentPage = getCurrentPageName();
+            const navigation = navigationMap[currentPage];
+
+            if (!navigation) {
+                console.warn('Navigation not found for page:', currentPage);
+                return;
+            }
+
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+
+            // Handle previous button
+            if (navigation.prev) {
+                prevButton.href = navigation.prev;
+                prevButton.style.visibility = 'visible';
+            } else {
+                prevButton.style.visibility = 'hidden';
+            }
+
+            // Handle next button
+            if (navigation.next) {
+                nextButton.href = navigation.next;
+                nextButton.style.visibility = 'visible';
+            } else {
+                nextButton.style.visibility = 'hidden';
+            }
+        }
+
+        // Initialize navigation when page loads
+        document.addEventListener('DOMContentLoaded', initializeNavigation);
+
+        // Optional: Add keyboard navigation (arrow keys)
+        document.addEventListener('keydown', function (event) {
+            const currentPage = getCurrentPageName();
+            const navigation = navigationMap[currentPage];
+
+            if (!navigation) return;
+
+            // Left arrow key for previous
+            if (event.key === 'ArrowLeft' && navigation.prev) {
+                window.location.href = navigation.prev;
+            }
+
+            // Right arrow key for next
+            if (event.key === 'ArrowRight' && navigation.next) {
+                window.location.href = navigation.next;
+            }
+        });
+    </script>
+
+</body>
+
 </html>
-
