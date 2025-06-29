@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Cell-U-Learn
-        </title>
-        <link rel="stylesheet" href="CellULearnSite/CSS/styles.css">
-    </head>
-    <body>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Cell-U-Learn
+    </title>
+    <link rel="stylesheet" href="CellULearnSite/CSS/styles.css">
+    <link rel="stylesheet" href="CellULearnSite/CSS/generalPageStyle.css">
+</head>
+
+<body>
+    <div class="page-container">
         <header>
             <nav class="navbar">
                 <ul class="nav-menu">
                     <li class="nav-item" style="width: 100px; display: flex;"><a href="index.html">Home</a></li>
-                    
+
                     <!-- Dropdown Column 1 -->
                     <li class="nav-item dropdown">
                         <a href="CellULearnSite/Pages/1.0brainOverview.html" class="dropbtn">How your brain works</a>
                         <div class="dropdown-content">
-                          <a href="CellULearnSite/Pages/1.1howMemory.html">1. How does memory work?</a>
-                          <a href="CellULearnSite/Pages/1.2neuronConnections.html">2. Neuronal Connections</a>
+                            <a href="CellULearnSite/Pages/1.1howMemory.html">1. How does memory work?</a>
+                            <a href="CellULearnSite/Pages/1.2neuronConnections.html">2. Neuronal Connections</a>
                         </div>
-                      </li>
+                    </li>
                     <!-- Dropdown Column 2 -->
                     <li class="nav-item dropdown">
                         <a href="CellULearnSite/Pages/2.0cyclesOverview.html" class="dropbtn">Cycle of learning</a>
@@ -36,43 +39,68 @@
                             <a href="CellULearnSite/Pages/2.7cyclesSummary.html">Summary</a>
                         </div>
                     </li>
-                    <li class="nav-item" style="width: 100px; display: flex;"><a href="CellULearnSite/Pages/3.0citations.html">Citations</a></li>
+                    <li class="nav-item" style="width: 100px; display: flex;"><a
+                            href="CellULearnSite/Pages/3.0citations.html">Citations</a></li>
                 </ul>
             </nav>
         </header>
-        <img src="CellULearnSite/Assets/HomePage/placeholderHomeHeader.png" style="width: 100vw;">
-        <div id="wholePage" style="display: flex; width: 100vw; justify-content: center; align-items: flex-start;">
-            <div id="mainBody" style="display: flex; flex-direction: column;">
-                <div style="display: flex; align-items: flex-start; padding-top: 30px;">
-                    <img src="CellULearnSite/Assets/HomePage/brainGraphic.png" style="width: 30vw;">
-                <div style="display: flex; flex-direction: column; justify-content: center; width: 60vw; max-width: 600px;">
-                    <h1 style="font-size: 3em; text-align: center;">
-                        What is metacognition?
+        <div class="WholeBody">
+            <div style="display: flex; justify-content: center; background-color: #fafafa; border-bottom: solid;">
+                <img src="/CellULearnSite/Assets/HomePage/croppedCellULearn.svg" style="width: 1200px">
+            </div>
+            <div class="SectionContainer">
+                <div class="SectionContent" style="width: 1200px;">
+                    <h1 style="text-align: center;">
+                        Welcome to Cell-U-Learn!
                     </h1>
-                    <h2 style="font-size: 2em; padding: 5px 1px; color: #777;">
-                        Metacognition is being aware of how you think and learn, and taking steps to control and improve these processes.
-                    </h2>
-                    <h2 style="font-size: 2em; padding: 5px 1px; color: #777;">
-                        Another way to think about metacognition is "How do I know that I know (or do not know) something?"
-                    </h2>
-                    
+                    <p style="text-align: center;">
+                        This module is designed to help you explore how you think and learn. Journey through
+                        Cell-U-Learn to refine your study approaches and enhance your overall learning experience!
+                    </p>
                 </div>
+            </div>
+            <div class="SectionContainer">
+                <div class="SectionContent" style="width: 450px;">
+                    <img src="/CellULearnSite/Assets/HomePage/brainGraphic.png" style="width: 100%;">
                 </div>
-                <div style="display: flex; flex-direction: column;">
-                    <h2 style="font-size: 1.5em; padding: 25px 1px;">
-                        If you would like to explore more about How your brain works, click the button below. Or, proceed to the  Cycle of Learning to discover how to improve your learning.
+                <div class="SectionContent" style="width: 650px;">
+                    <h2>
+                        What is metacognition?
                     </h2>
-                    <div id="buttonBox" style="display: flex; justify-content: space-between; padding: 5px 10px;">
-                        <a href="CellULearnSite/Pages/1.0brainOverview.html">
-                            <button class="bottomNavButton">How Your Brain Works</button>
-                        </a>
-                        <a href="CellULearnSite/Pages/2.0cyclesOverview.html">
-                            <button class="bottomNavButton">Cycle of Learning</button>
-                        </a>
-                        
-                    </div>
+                    <p style="padding-block-start: 10px;">
+                        Metacognition is being aware of how you think and learn, and taking steps to control and improve
+                        these processes.
+                    </p>
+                    <p style="padding-block-start: 25px;">
+                        Another way to think about metacognition is "How do I know that I know (or do not know)
+                        something?"
+                    </p>
+                </div>
+            </div>
+            <div class="SectionContainer">
+                <div class="SectionContent" style="width: 1200px;">
+                    <p>
+                        If you would like to explore more about <span style="font-weight: bold;">How your brain
+                            works</span>, click the button below. Or, proceed to the <span
+                            style="font-weight: bold;">Cycle of Learning</span> to discover how to improve your
+                        learning.
+                    </p>
+                </div>
+            </div>
+            <div class="SectionContainer">
+                <div class="SectionContent" style="display: flex; justify-content: center;">
+                    <a href="CellULearnSite/Pages/1.0brainOverview.html">
+                        <button class="bottomNavButton">How Your Brain Works</button>
+                    </a>
+                </div>
+                <div class="SectionContent" style="display: flex; justify-content: center;">
+                    <a href="CellULearnSite/Pages/2.0cyclesOverview.html">
+                        <button class="bottomNavButton">Cycle of Learning</button>
+                    </a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

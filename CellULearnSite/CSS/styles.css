@@ -86,6 +86,7 @@
     border-width: 2px;
     border-radius: 8px;
     transition-duration: 0.2s;
+    font-size: large;
 }
 
 .bottomNavButton:hover{
