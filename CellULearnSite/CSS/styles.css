@@ -102,7 +102,7 @@
     background-color: white;
     overflow: hidden;
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 /* Collapsible Header */
@@ -122,10 +122,11 @@
 }
 
 .collapsible-title {
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-weight: 500;
     margin: 0;
     color: #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Chevron Icon */
@@ -150,7 +151,7 @@
     max-height: 2000px;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    padding: 0 24px 24px 24px;
+    padding: 15px 24px 24px 24px;
     font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -234,4 +235,20 @@
         padding: 10px 15px;
         font-size: 12px;
     }
+}
+
+sup{
+    line-height: 0;
+}
+
+sup a{
+    line-height: 0;
+    font-size: 75%;
+    text-decoration: none;
+    color: #333;
+}
+
+sup a:hover{
+    text-decoration: underline;
+    color: #283db8;
 }
