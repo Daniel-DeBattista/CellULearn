@@ -48,77 +48,273 @@
             <div style="background-color: #1f4571; display: flex; justify-content: center; min-width: 1100px;">
                 <img src="../Assets/BrainSummaryPage/neuronalConnectionsHeader.svg" class="ImageHeader"></img>
             </div>
-            <div class="SectionContainer">
-                <div class="SectionContent" style="width: 50%; max-width: 650px;">
-                    <img src="..//Assets/BrainSummaryPage/neuronD1.svg" style="width: 100%;"></img>
-                </div>
-                <div class="SectionContent">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
-                        Prior knowledge
-                    </p>
-                    <p>
-                        Each of us has unique neuronal connections shaped by our past experiences. Because of our prior
-                        knowledge, even when we are exposed to the same new information, we will each build and
-                        strengthen our neuronal connections differently.
-                    </p>
-                </div>
-            </div>
-            <div class="SectionContainer">
-                <div class="SectionContent">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
-                        Connecting new information with prior knowledge
+            <!--1start-->
+            <!-- Add this section where you want the interactive brain image to appear in 1.2neuronConnections.html -->
+<!-- Replace the existing image or add as a new section -->
 
-                    </p>
-                    <p>
-                        New information can either align with our existing knowledge, making it easy to connect the
-                        dots, or it can challenge what we already know, prompting us to reconsider our prior
-                        understanding.
+<div class="SectionContainer">
+    <div class="SectionContent" style="width: 1200px; display: flex;">
+        <!-- Interactive Brain Image Container -->
+        <div class="interactive-brain-container">
+            <!-- Your brain image - update the src path as needed -->
+            <img src="../Assets/BrainSummaryPage/neuronD0.png" alt="Brain learning process" class="brain-image">
+            
+            <!-- Hotspot 1: Prior Knowledge (left side) -->
+            <div class="brain-hotspot" style="top: 45%; left: 2%;">
+                <div class="hotspot-trigger"></div>
+                <div class="brain-dropdown">
+                    <button class="dropdown-close">×</button>
+                    <h4>Prior Knowledge</h4>
+                    <p>Each of us has unique neuronal connections shaped by our past experiences. Because of our prior knowledge, even when we are exposed to the same new information, we will each build and strengthen our neuronal connections differently.</p>
+                </div>
+            </div>
+            
+            <!-- Hotspot 2: Connecting New Information (top) -->
+            <div class="brain-hotspot" style="top: 10%; left: 18%;">
+                <div class="hotspot-trigger"></div>
+                <div class="brain-dropdown">
+                    <button class="dropdown-close">×</button>
+                    <h4>Connecting New Information</h4>
+                    <p>New information can either align with our existing knowledge, making it easy to connect the dots, or it can challenge what we already know, prompting us to reconsider our prior understanding. </p>
+                </div>
+            </div>
+            
+            <!-- Hotspot 3: Wiring and Rewiring (top right) -->
+            <div class="brain-hotspot" style="top: 6%; right: 20%;">
+                <div class="hotspot-trigger"></div>
+                <div class="brain-dropdown">
+                    <button class="dropdown-close">×</button>
+                    <h4>Wiring and Rewiring</h4>
+                    <p>Your neuronal map (all the synaptic connections that make up your brain) is dynamic. With every learning experience you have, you not only expand your understanding but also physically refine your synaptic connections.</p>
+                </div>
+            </div>
+            
+            <!-- Hotspot 4: Becoming an Expert (right side) -->
+            <div class="brain-hotspot" style="top: 40%; right: 5%;">
+                <div class="hotspot-trigger"></div>
+                <div class="brain-dropdown">
+                    <button class="dropdown-close">×</button>
+                    <h4>Becoming an 'Expert'</h4>
+                    <p>An expert has a deep and interconnected conceptual understanding of a topic or skill, which makes it easier for them to learn and integrate new concepts into their frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                    </p>
-                </div>
-                <div class="SectionContent" style="width: 50%; max-width: 650px;">
-                    <img src="..//Assets/BrainSummaryPage/neuronD2.svg" style="width: 100%;"></img>
-                </div>
-            </div>
-            <div class="SectionContainer">
-                <div class="SectionContent" style="width: 900px;">
-                    For example, while you may have learned previously about the 'central dogma' of molecular biology
-                    (DNA → RNA → protein), encountering exceptions like retroviruses, where RNA can be reverse
-                    transcribed into DNA, requires you to adjust your framework to create space for new ides.
-                </div>
-            </div>
-            <div class="SectionContainer">
-                <div class="SectionContent" style="width: 50%; max-width: 650px;">
-                    <img src="..//Assets/BrainSummaryPage/neuronD3.svg" style="width: 100%;"></img>
-                </div>
-                <div class="SectionContent">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
-                        Wiring and rewiring
-                    </p>
-                    <p>
-                        Your neuronal map (all the synaptic connections that make up your brain) is dynamic. With every
-                        learning experience you have, you not only expand your understanding but also physically refine
-                        your synaptic connections.
-                    </p>
-                </div>
-            </div>
-            <div class="SectionContainer">
-                <div class="SectionContent">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
-                        Becoming an “expert”
-                    </p>
-                    <p>
-                        An expert has a deep and interconnected conceptual understanding of a topic or skill, which
-                        makes it easier for them to learn and integrate new concepts into their frameworks.
-                    </p>
-                </div>
-                <div class="SectionContent" style="width: 50%; max-width: 650px;">
-                    <img src="..//Assets/BrainSummaryPage/neuronD4.svg" style="width: 100%;"></img>
-                </div>
-            </div>
+<style>
+/* Interactive Brain Container Styles */
+.interactive-brain-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.brain-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hotspot Styles */
+.brain-hotspot {
+    position: absolute;
+    z-index: 10;
+}
+
+/* Invisible trigger area over text bubbles */
+.hotspot-trigger {
+    width: 170px;
+    height: 90px;
+    cursor: pointer;
+    
+    
+    /* background: rgba(255, 0, 0, 0.2); */
+}
+
+.hotspot-trigger:hover {
+    /* Optional: Add subtle highlight on hover */
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+}
+
+/* Dropdown Styles */
+.brain-dropdown {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    top: 70px;
+    left: 50%;
+    transform-origin: top center;
+    margin-left: -140px; /* Half of width to center */
+}
+
+/* Active state for dropdown */
+.brain-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1) translateX(-50%);
+    left: 50%;
+    margin-left: 0;
+}
+
+/* Arrow pointing to hotspot */
+.brain-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Dropdown content styling */
+.brain-dropdown h4 {
+    margin: 0 0 12px 0;
+    color: #2d3773;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.brain-dropdown p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Close button */
+.dropdown-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #999;
+    transition: all 0.2s ease;
+}
+
+.dropdown-close:hover {
+    background: #e0e0e0;
+    color: #333;
+}
+
+/* Adjust dropdown position for edge cases */
+.brain-hotspot:first-child .brain-dropdown {
+    left: 0;
+    margin-left: 0;
+    transform-origin: top left;
+}
+
+.brain-hotspot:first-child .brain-dropdown.active {
+    transform: translateY(0) scale(1);
+}
+
+.brain-hotspot:last-child .brain-dropdown {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    transform-origin: top right;
+}
+
+.brain-hotspot:last-child .brain-dropdown.active {
+    transform: translateY(0) scale(1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .brain-dropdown {
+        width: 240px;
+    }
+    
+    .hotspot-trigger {
+        width: 100px;
+        height: 50px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all brain hotspots
+    const brainHotspots = document.querySelectorAll('.brain-hotspot');
+    
+    brainHotspots.forEach(hotspot => {
+        const trigger = hotspot.querySelector('.hotspot-trigger');
+        const dropdown = hotspot.querySelector('.brain-dropdown');
+        const closeBtn = hotspot.querySelector('.dropdown-close');
+        
+        // Show dropdown on hover
+        trigger.addEventListener('mouseenter', function() {
+            // Optional: Close other dropdowns first (remove if you want multiple open)
+            // document.querySelectorAll('.brain-dropdown.active').forEach(d => {
+            //     if (d !== dropdown) d.classList.remove('active');
+            // });
+            
+            // Show this dropdown
+            dropdown.classList.add('active');
+        });
+        
+        // Close dropdown with close button
+        closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.remove('active');
+        });
+        
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hotspot.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+        
+        // Prevent closing when clicking inside dropdown
+        dropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    
+    // Optional: Close all with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.brain-dropdown.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
+</script>
+            
+            
+            <!--1end-->
+
             <div class="SectionContainer">
                 <div class="SectionContent" style="width: 1000px;">
-                    <p>According to Malcolm Gladwell<sup><a href="3.0citations.html">7</a></sup>, it takes 10,000 hours of practice to become an expert! If you
+                    <p class="bodyText">According to Malcolm Gladwell<sup><a href="3.0citations.html">7</a></sup>, it takes 10,000 hours of practice to become an expert! If you
                         spend 2 hours a day, 6 days a week for 15 weeks (the length of most semester-long courses), you
                         will accumulate 180 hours of learning. So, realistically, you are not going to become an expert
                         on any one topic during one course. However, you <span
@@ -131,7 +327,7 @@
                     <img src="..//Assets/BrainSummaryPage/neuronD5.svg" style="width: 100%;"></img>
                 </div>
                 <div class="SectionContent" style="width: 600px">
-                    <p>
+                    <p class="bodyText">
                         One way of thinking about developing expertise is that you are building a “tree of knowledge.”
                         In this tree of knowledge, you connect and organize information, making it easier to recall and
                         apply that knowledge to new problems. <br><br>
@@ -142,7 +338,7 @@
             </div>
             <div class="SectionContainer">
                 <div class="SectionContent" style="width: 600px">
-                    <p>Thinking about your thinking takes effort. Understanding what, why, and how you learn can empower
+                    <p class="bodyText">Thinking about your thinking takes effort. Understanding what, why, and how you learn can empower
                         you to learn more effectively.</p>
                 </div>
                 <div class="SectionContent" style="width: 400px;">
@@ -151,10 +347,10 @@
             </div>
             <div class="SectionContainer">
                 <div class="SectionContent" style="width: 1000px;">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
+                    <h2 style="text-align: center; color: black;">
                         Think about a topic you're confident that you know well<br><br>
-                    </p>
-                    <p>
+                    </h2>
+                    <p class="bodyText">
                         How do you know that you understand this topic? What makes you confident about your knowledge?
                         One way to think about what you know is to think about the "level" of your knowledge.
                     </p>
@@ -165,10 +361,10 @@
                     <img src="..//Assets/BrainSummaryPage/neuronD7.svg" style="width: 100%;"></img>
                 </div>
                 <div class="SectionContent">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
+                    <h2 style="text-align: center; color: black;">
                         Levels of Knowing
-                    </p>
-                    <p>
+                    </h2>
+                    <p class="bodyText">
                         This diagram is one way of illustrating different levels of knowing, from remembering and
                         understanding (at the bottom) to applying, then analyzing and evaluating (at the top). Each
                         level builds on the prior level. Thus, higher levels require more time and effort (cognitive
@@ -178,10 +374,10 @@
             </div>
             <div class="SectionContainer">
                 <div class="SectionContent" style="width: 1000px; line-height: 1.75;">
-                    <p style="font-weight: bold; font-size: 125%; text-align: center; color: black;">
+                    <h2 style="text-align: center; color: black;">
                         Learning something well requires effort! In the next section, we'll help you identify effective
                         ways to learn.
-                    </p>
+                    </h2>
                 </div>
             </div>
         </div>
